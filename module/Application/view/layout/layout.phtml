@@ -1,0 +1,33 @@
+<?= $this->doctype() ?>
+
+<html lang="zh-Hans">
+    <head>
+        <meta charset="utf-8">
+        <?= $this->headTitle('ZF')->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?= $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1, shrink-to-fit=no')
+        ?>
+
+        <!-- Le styles -->
+        <?= $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => '/img/favicon.ico'])
+            ->prependStylesheet($this->domain('res', '/web/dist/css/style.css'))
+            ->prependStylesheet($this->domain('res', '/libs/bootstrap/4.0.0-beta.2/css/bootstrap.min.css'))
+        ?>
+
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <a class="navbar-brand" href="#">Dashboard</a>
+            </nav>
+        </header>
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="col-md-2">2</nav>
+                <nav class="col-md-10">10</nav>
+            </div>
+        </div>
+        <?= $this->inlineScript() ?>
+    </body>
+</html>

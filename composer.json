@@ -1,6 +1,26 @@
 {
+    "name": "localhost/rpc",
+    "type": "project",
+    "authors": [
+        {
+            "name": "王超",
+            "email": "wisoch@163.com"
+        }
+    ],
+    "minimum-stability": "stable",
     "require": {
-        "zendframework/zend-json-server": "^3.0",
-        "zendframework/zend-mvc": "^3.1"
+        "zendframework/zend-mvc": "^3.0",
+        "zendframework/zend-log": "^2.9",
+        "zendframework/zend-db": "^2.8",
+        "zendframework/zend-cache": "^2.7",
+        "zendframework/zend-json-server": "^3.0"
+    },
+    "autoload": {
+        "psr-4" : {
+            "Kernel\\ModuleManager\\": "vendor/kernel/kernel-modulemanager/src/",
+            "Kernel\\Mvc\\": "vendor/kernel/kernel-mvc/src/",
+            "Kernel\\Db\\": "vendor/kernel/kernel-db/src/",
+            "Application\\": "module/Application/src/"
+        }
     }
 }
